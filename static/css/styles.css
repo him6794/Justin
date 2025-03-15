@@ -1,0 +1,245 @@
+/* 基本重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #1a1a1a;
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* 粒子背景容器 */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #0d0d0d;
+    z-index: -1;
+}
+
+/* 主容器 */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* 導航欄 */
+nav {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 8px 16px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* 標題和打字效果 */
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.typing {
+    color: #4dff4d;
+    border-right: 2px solid #4dff4d;
+    animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #4dff4d; }
+}
+
+/* 簡介段落 */
+p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #cccccc;
+}
+
+/* 社交連結 */
+.links {
+    margin: 2rem 0;
+}
+
+.links a {
+    display: inline-block;
+    margin-right: 1rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+}
+
+/* 作品集區塊 */
+.projects {
+    margin-top: 3rem;
+}
+
+.projects h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.project img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.project h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.project p {
+    color: #aaaaaa;
+    margin-bottom: 1rem;
+}
+
+.project a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #4dff4d;
+    color: #1a1a1a;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.project a:hover {
+    background: #66ff66;
+    transform: translateY(-2px);
+}
+
+/* 部落格樣式 */
+.blog-list {
+    margin-top: 2rem;
+}
+
+.blog-post {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.blog-post:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.blog-post h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.blog-post small {
+    color: #888888;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.blog-post p {
+    color: #cccccc;
+}
+
+/* 單篇文章樣式 */
+.full-post {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-top: 2rem;
+    backdrop-filter: blur(10px);
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.8rem 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.back-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    nav {
+        top: 10px;
+        right: 10px;
+    }
+
+    nav a {
+        margin-left: 10px;
+        padding: 6px 12px;
+    }
+
+    .project-list {
+        grid-template-columns: 1fr;
+    }
+}

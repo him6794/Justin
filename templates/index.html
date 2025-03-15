@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>👋 你好，我是 <span class="typing"></span></h1>
+    <p>熱愛技術，熱愛折騰，正在打造一個 <strong>去中心化的分布式運算平台</strong>，讓閒置的計算資源發揮價值。</p>
+    <p>主要使用 <strong>Python、gRPC</strong>，偶爾玩玩機器學習和自動化。</p>
+    
+    <div class="links">
+        <a href="mailto:jack0916295614@gmail.com">📧 Email</a>
+        <a href="https://github.com/him6794" target="_blank">💻 GitHub</a>
+        <a href="https://www.instagram.com/justin20090711/" target="_blank">📸 Instagram</a>
+    </div>
+
+    <div class="projects">
+        <h2>💡 我的作品</h2>
+        <div class="project-list">
+            {% for project in projects %}
+            <div class="project">
+                <img src="{{ url_for('static', filename='images/' + project.image) }}" alt="{{ project.title }}">
+                <h3>{{ project.title }}</h3>
+                <p>{{ project.description }}</p>
+                <a href="{{ project.url }}" target="_blank">查看詳情</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

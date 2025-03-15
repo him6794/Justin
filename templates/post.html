@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}{{ post.title }} | {{ super() }}{% endblock %}
+
+{% block content %}
+    <article class="full-post">
+        <h2>{{ post.title }}</h2>
+        <small>{{ post.date }}</small>
+        <div class="post-content">
+            {{ post.content }}
+        </div>
+        <a href="/blog" class="back-link">← 返回部落格列表</a>
+    </article>
+{% endblock %}
